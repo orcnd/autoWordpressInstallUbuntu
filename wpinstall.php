@@ -7,7 +7,7 @@ $c=new PDO('mysql:host=localhost;', 'root', '');
 $c->query("create database wpdb");
 
 $c->query("create user wpuser@localhost identified by '" . $wpdbpass . "'");
-$c->query("alter user wpuser@localhost identified by '" . $wpdbpass . "'");
+$c->query("SET PASSWORD FOR 'wpuser'@'localhost'=password('" . $wpdbpass . "');");
 $c->query("grant all privileges on wpdb.* to wpuser@localhost");
 $c->query("FLUSH PRIVILEGES");
 
