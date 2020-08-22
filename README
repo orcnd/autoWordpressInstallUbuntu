@@ -8,3 +8,4 @@ cd /wpin
 git clone https://github.com/orcnd/autoWordpressInstallUbuntu.git
 cd autoWordpressInstallUbuntu
 php wpinstall.php
+rm -rf /wpin
