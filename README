@@ -1,7 +1,8 @@
 apt update -y
 apt upgrade -y
+apt -q -y install apache2 
 export DEBIAN_FRONTEND=noninteractive
-apt -q -y install mysql-server php  php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip php-mysql git
+apt -q -y install mysql-server php php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip php-mysql git
 git clone https://github.com/orcnd/autoWordpressInstallUbuntu.git
 cd autoWordpressInstallUbuntu
 php wpinstall.php
